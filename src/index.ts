@@ -1,7 +1,7 @@
 import { configure, getLogger, addLayout, Logger, LoggingEvent } from 'log4js'
 import { formatterDate } from './utils'
 
-class Log4jsLogger {
+export default class Log4jsLogger {
   protected layoutType = 'layout'
   constructor() {
     addLayout('file', (config) => formatterLogger)
@@ -41,8 +41,3 @@ function formatterLogger(logEvent: LoggingEvent): string {
   const { levelStr } = logEvent.level
   return time + ' ' + levelStr + ' ' + logEvent.data
 }
-
-const logger = new Log4jsLogger().init({ filename: '11.log' });
-logger.debug("Some debug DEBUG Some debug messagesDEBUG Some debug messagesDEBUG Some debug messagesDEBUG Some debug messagesDEBUG Some debug messagesDEBUG Some debug messagesDEBUG Some debug messagesDEBUG Some debug messagesDEBUG Some debug messages");
-
-logger.info('1212', 1121)
