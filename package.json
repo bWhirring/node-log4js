@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@types/node": "^12.12.14",
-    "log4js": "^6.1.0",
+    "log4js": "^6.4.0",
     "typescript": "^3.7.2"
   }
 }
